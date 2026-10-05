@@ -10,20 +10,20 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
-      { 
-        path: 'users', 
-        element: <UsersPage />, 
-        loader: usersLoader 
+      {
+        path: 'users',
+        element: <UsersPage />,
+        loader: usersLoader,
       },
-      { 
+      {
         path: 'users/:id', 
-        element: <UserDetailPage />, 
+        element: <UserDetailPage />,
         loader: userDetailLoader,
-        errorElement: <ErrorPage /> 
       },
-      { path: '*', element: <NotFoundPage /> }
-    ]
-  }
-])
+      { path: '*', element: <NotFoundPage /> },
+    ],
+  },
+]);
