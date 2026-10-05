@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     path: '/users/:id',
     element: <UserDetailPage />,
     loader: userLoader,
-    errorElement: <ErrorPage />, // Перехватывает throw new Response(...)
+    errorElement: <ErrorPage />,
   },
 ]);
 
